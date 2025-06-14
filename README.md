@@ -26,6 +26,12 @@ Then in the chat try:
 
 This plugin currently only works with `llm chat` since the container is not persisted across multiple calls.
 
+## Warning
+
+This is a *very early alpha*. Every time you start a new chat it will create a new Docker container without closing down the previous one.
+
+It will mount the current directory as a volume in the container, so commands that run in Docker will be able to modify or delete files in that directory.
+
 ## Development
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
